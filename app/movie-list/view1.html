@@ -1,0 +1,49 @@
+<div class="panel panel-default">
+  <div class="panel-body"><input type="text" placeholder="Search.." ng-model="search.text"></div>
+</div>
+
+<div class="row">
+
+	<div class="col-sm-6 col-xs-12 col-md-6 movie-preview" ng-repeat="item in data | startFrom:currentPage*pageSize | limitTo:pageSize | orderBy:sortByYear() | filter:search.text ">
+	    <div class="preview_block">
+	    	<div class="media">
+				  <div class="media-left media-top">
+				    <a href="{{item.movie_imdb_link}}" target="_blank">
+				      <img class="media-object" src="http://lorempixel.com/150/200?id={{item.movie_title}}" alt="{{item.movie_title}}" />
+				    </a>
+				  </div>
+				  <div class="media-body">
+				    <h4>{{item.movie_title}} ({{item.title_year}})</h4>
+				    <div class="detail-row">
+				    	<div class="content-rating">
+				    			{{item.content_rating}}
+				    	</div>
+				        <div class="movie-details-value">{{item.genres}}</div>
+			        </div>
+			        <div class="detail-row">
+			        	<div class="movie-details-label">Language : </div>
+			        	<div class="movie-details-value"> {{item.language == '' ? 'NA' : item.language}} ( {{item.country}} )</div>
+			        </div>
+			        <div class="detail-row">
+			        	<div class="movie-details-label">Director : </div>
+			        	<div class="movie-details-value"> {{item.director_name == '' ? 'NA' : item.director_name}}</div>
+			        </div>
+			        <div class="detail-row">
+			        	<div class="movie-details-label">Stars : </div>
+			        	<div class="movie-details-value"> {{item.actor_1_name}}  {{item.actor_2_name}}</div>
+			        </div>
+				  </div>
+			</div>
+	    </div>
+  </div>
+</div>
+<div class="paginate center-block" ng-hide="showPaginate">
+	<button ng-disabled="currentPage == 0" ng-click="currentPage=currentPage-1">
+        Previous
+	</button>
+	{{currentPage+1}}/{{numberOfPages()}}
+	<button ng-disabled="currentPage >= data.length/pageSize - 1" ng-click="currentPage=currentPage+1">
+	    Next
+	</button>	
+</div>
+ 

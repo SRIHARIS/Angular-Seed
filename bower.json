@@ -1,0 +1,22 @@
+{
+  "name": "simility",
+  "description": "A starter project for AngularJS",
+  "version": "0.0.0",
+  "homepage": "https://github.com/angular/angular-seed",
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "angular": "~1.5.0",
+    "angular-route": "~1.5.0",
+    "angular-loader": "~1.5.0",
+    "angular-mocks": "~1.5.0",
+    "html5-boilerplate": "^5.3.0",
+    "bootstrap": "^3.3.7",
+    "d3": "^4.5.1",
+    "nvd3": "^1.8.5",
+    "angular-nvd3": "^1.0.9"
+  },
+  "resolutions": {
+    "d3": "^3.4.4"
+  }
+}

@@ -1,0 +1,69 @@
+/* app css stylesheet */
+
+.navbar img{
+	width: 75px;
+}
+.navbar{
+	border-bottom: 1px solid #efefef;
+	margin-bottom: 0;
+}
+.navbar-toggle{
+	border-color : #eee;
+}
+.navbar-toggle .icon-bar{
+	background: #f06717;
+}
+
+/* Container */
+
+body > .container-fluid {
+    background: #f9f9f9;
+    padding : 25px;
+}
+
+/* Movies page */
+.preview_block{
+	background: #fff;
+	box-shadow: 1px 2px #efefef;
+	padding: 16px;
+	border : 1px solid #ddd;
+	transition: border .2s ease-in-out;
+	margin-bottom: 20px; 
+}
+
+.preview_block img{
+	width: 150px;
+	height: 200px;
+}
+
+.detail-row{
+	margin: 5px 0;
+}
+
+.content-rating {
+    display: inline-block;
+    border: 1px solid #666;
+    color: #666;
+    padding: 0 5px;
+    border-radius: 4px;
+    /* box-shadow: 1px 1px #efefef; */
+}
+
+.movie-preview {
+	min-height : 150px;
+}
+.movie-details-label{
+	display: inline-block;
+	color: #666;
+	font-weight: bold;
+	font-size: 13px;
+}
+
+.movie-details-value{
+	display: inline-block;
+}
+
+.paginate{
+	width: 160px;
+    margin-top: 20px;
+}
